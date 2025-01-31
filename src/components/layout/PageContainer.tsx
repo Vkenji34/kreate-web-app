@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import { cn } from "~/lib/utils";
-// import { HeadMetaData } from "./HeadMetaData";
+import { HeadMetaData } from "./HeadMetaData";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
@@ -19,7 +19,7 @@ export const PageContainer = forwardRef<
   ) => {
     return (
       <div className="h-full w-full">
-        {/* <HeadMetaData /> */}
+        <HeadMetaData />
         {withHeader && <Header />}
         <main ref={ref} className={cn("flex flex-col pb-10", className)} {...props}>
           {children}
