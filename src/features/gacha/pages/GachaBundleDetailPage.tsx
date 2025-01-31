@@ -12,7 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
 const GachaBundleDetailPage = () => {
   return (
     <PageContainer withFooter={false}>
-      <SectionContainer className="relative" minFullscreen>
+      <SectionContainer className="relative" minFullscreen padded>
         <div className="my-6 flex items-center gap-2">
           <UserAvatar isVerified src="" className="size-16" />
           <Link href="/kitsunee">
@@ -97,11 +97,8 @@ const GachaBundleDetailPage = () => {
         </Tabs>
 
         {/* Action Buttons */}
-        <div className="container bottom-0 left-0 right-0 flex max-w-screen-md gap-4 bg-background p-4 lg:pb-8">
-          <Button className="flex flex-1 items-center">
-            10 <PiggyBank className="ml-1 inline" /> for 15 spin
-          </Button>
-          <Button className="flex-1">
+        <div className="container sticky bottom-0 left-0 right-0 flex bg-background lg:static lg:pb-8">
+          <Button className="w-full">
             1 <PiggyBank className="ml-1 inline" /> for 1 spin
           </Button>
         </div>

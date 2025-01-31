@@ -19,45 +19,44 @@ export const ProfileSection = ({
   bundleCount,
 }: ProfileSectionProps) => {
   return (
-    <div className="flex flex-col items-center px-4 pb-8">
-      <UserAvatar src={profilePictureUrl} isVerified />
-
-      <div className="mt-4 flex items-center gap-2">
-        <h1 className="text-2xl font-bold text-foreground">{username}</h1>
-        <BadgeCheck className="h-6 w-6 text-primary" />
-      </div>
-
-      <div className="mt-2 flex gap-2">
-        {tags.map((tag) => (
-          <span key={tag} className="text-muted-foreground">
-            #{tag}
-          </span>
-        ))}
-      </div>
-
-      <div className="mt-6 flex gap-12">
-        <div className="text-center">
-          <div className="text-lg font-bold text-foreground">
-            {compactNumberFormatter.format(followerCount)}
+    <div className="flex flex-col px-4 pb-8">
+      <div className="flex items-center gap-4">
+        <UserAvatar
+          className="size-20 lg:size-24"
+          src={profilePictureUrl}
+          isVerified
+        />
+        <div className="flex flex-col">
+          <div className="flex items-center gap-2">
+            <h1 className="text-2xl font-bold text-foreground">{username}</h1>
+            <BadgeCheck className="h-6 w-6 text-primary" />
           </div>
-          <div className="text-muted-foreground">followers</div>
-        </div>
-        <div className="text-center">
-          <div className="text-lg font-bold text-foreground">
-            {compactNumberFormatter.format(bundleCount)}
+          <div className="flex gap-2 lg:text-base text-sm">
+            {/* <div className="flex gap-1">
+              <span className="font-bold text-foreground">
+                {compactNumberFormatter.format(followerCount)}
+              </span>
+              <span className="text-muted-foreground">followers</span>
+            </div>
+            <span>•</span> */}
+            <div className="flex gap-1">
+              <span className="font-bold text-foreground">
+                {compactNumberFormatter.format(bundleCount)}
+              </span>
+              <span className="text-muted-foreground">Gacha Packs</span>
+            </div>
           </div>
-          <div className="text-muted-foreground">bundles</div>
         </div>
       </div>
 
-      <div className="mt-6 flex w-full gap-4">
+      {/* <div className="mt-6 flex w-full gap-4">
         <Button variant="muted" className="flex-1">
           Follow
         </Button>
         <Button variant="muted" className="flex-1">
           Share
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 };
