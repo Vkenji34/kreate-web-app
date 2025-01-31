@@ -1,14 +1,12 @@
 import {
   BookHeart,
   Boxes,
-  CheckCircle,
   Coins,
   Dices,
   HandCoins,
   PartyPopper,
-  Wrench,
+  Wrench
 } from "lucide-react";
-import { Header } from "~/components/layout/Header";
 import { PageContainer } from "~/components/layout/PageContainer";
 import { SectionContainer } from "~/components/layout/SectionContainer";
 import { MonetizationFeatureCard } from "../components/MonetizationFeatureCard";
