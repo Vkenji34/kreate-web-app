@@ -29,13 +29,14 @@ const ProfilePage = () => {
           </TabsList>
 
           <TabsContent value="gacha" className="mt-4 px-4">
-            <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
               {new Array(10).fill(null).map((_, index) => (
                 <Link href={`/gacha/bundle/${index}`} key={index}>
                   <BundleCard
                     key={index}
-                    price={3}
+                    price={10000}
                     title="Kitsunee Y2K Photoshoot"
+                    itemCount={10}
                   />
                 </Link>
               ))}

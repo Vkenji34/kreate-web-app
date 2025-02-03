@@ -1,10 +1,11 @@
-import { Badge } from "lucide-react";
 import Image from "next/image";
+import { toRupiah } from "~/utils/toRupiah";
 
 type BundleCardProps = {
   coverImageUrl?: string;
   title: string;
   price: number;
+  itemCount: number;
 };
 
 export const BundleCard = (props: BundleCardProps) => {
@@ -21,9 +22,9 @@ export const BundleCard = (props: BundleCardProps) => {
       </div>
       <div className="p-3">
         <h3 className="font-semibold text-foreground">{props.title}</h3>
-        <div className="mt-1 flex items-center">
-          <span className="text-foreground">{props.price}</span>
-          <Badge className="ml-1 h-4 w-4 text-foreground" />
+        <div className="mt-1 flex items-center justify-between flex-wrap">
+          <span className="text-muted">{props.itemCount} Photos</span>
+          <span className="text-primary">{toRupiah(props.price)}</span>
         </div>
       </div>
     </div>
