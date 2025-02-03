@@ -20,16 +20,16 @@ const ProfilePage = () => {
       </SectionContainer>
 
       <SectionContainer minFullscreen className="relative">
-        <Tabs defaultValue="tip">
+        <Tabs defaultValue="gacha">
           <TabsList className="sticky top-0 z-10 flex items-center justify-center bg-background lg:mb-4">
             <div className="flex w-full items-center justify-center border-b border-muted">
-              <TabsTrigger value="tip">Tip</TabsTrigger>
               <TabsTrigger value="gacha">Gacha</TabsTrigger>
+              <TabsTrigger value="tip">Tip</TabsTrigger>
             </div>
           </TabsList>
 
           <TabsContent value="gacha" className="mt-4 px-4">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
               {new Array(10).fill(null).map((_, index) => (
                 <Link href={`/gacha/bundle/${index}`} key={index}>
                   <BundleCard

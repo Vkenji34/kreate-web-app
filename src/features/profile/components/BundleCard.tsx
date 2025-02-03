@@ -12,7 +12,7 @@ export const BundleCard = (props: BundleCardProps) => {
     <div className="overflow-hidden rounded-xl bg-card shadow-xl">
       <div className="relative aspect-square">
         <Image
-          src={props.coverImageUrl ?? ""}
+          src={props.coverImageUrl ?? "https://placehold.co/600/png"}
           unoptimized
           alt={props.title}
           className="h-full w-full object-cover"

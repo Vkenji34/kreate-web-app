@@ -3,26 +3,29 @@
 @tailwind utilities;
 @layer base {
   :root {
-    --background: 260 13% 95%;
+    --background: 280 20% 97%;
     --foreground: 259 5% 10%;
-    --card: 260 13% 95%;
+    --card: 280 20% 97%;
     --card-foreground: 259 5% 15%;
     --popover: 259 100% 95%;
     --popover-foreground: 259 100% 10%;
-    --primary: 259 88.8% 45.5%;
+    --primary: 259 90% 61%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 259 30% 70%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 260 100% 76%;
+    --secondary-foreground: 0 0% 100%;
     --muted: 221 30% 85%;
     --muted-foreground: 259 5% 35%;
     --accent: 221 30% 80%;
     --accent-foreground: 259 5% 15%;
-    --destructive: 0 100% 30%;
+    --destructive: 346 86% 51%;
     --destructive-foreground: 259 5% 90%;
     --border: 259 30% 50%;
     --input: 0 0% 69%;
-    --ring: 259 88.8% 45.5%;
+    --ring: 259 90% 61%;
     --radius: 0.5rem;
+    --shadow-primary: 259 89% 45%;
+    --shadow-secondary: 259 90% 61%;
+    --shadow-destructive: 346 86% 51%;
   }
   .dark {
     --background: 259 50% 10%;
@@ -31,7 +34,7 @@
     --card-foreground: 259 5% 90%;
     --popover: 259 50% 5%;
     --popover-foreground: 259 5% 90%;
-    --primary: 259 88.8% 45.5%;
+    --primary: 259 90% 61%;
     --primary-foreground: 0 0% 100%;
     --secondary: 259 30% 20%;
     --secondary-foreground: 0 0% 100%;
@@ -39,11 +42,11 @@
     --muted-foreground: 259 5% 60%;
     --accent: 221 30% 25%;
     --accent-foreground: 259 5% 90%;
-    --destructive: 0 100% 30%;
+    --destructive: 346 86% 51%;
     --destructive-foreground: 259 5% 90%;
     --border: 259 30% 26%;
     --input: 259 30% 26%;
-    --ring: 259 88.8% 45.5%;
+    --ring: 259 90% 61%;
     --radius: 0.5rem;
   }
 }

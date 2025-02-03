@@ -58,8 +58,17 @@ export default {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        shadow: {
+          primary: "hsl(var(--shadow-primary))",
+        }
       },
+      boxShadow: {
+        'button-primary': "0 4px 0 0 hsl(var(--shadow-primary))",
+        'button-secondary': "0 4px 0 0 hsl(var(--shadow-secondary))",
+        'button-destructive': "0 4px 0 0 hsl(var(--shadow-destructive))",
+      }
     },
   },
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
