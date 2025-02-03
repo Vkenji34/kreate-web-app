@@ -1,7 +1,8 @@
 import { Coins } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import kreateLogoFull from "~/assets/kreate_full.png";
+import kreateIcon from "~/assets/kreate_icon.png";
+import avatarBorder from "~/assets/avatar_border.svg";
 import { Button } from "~/components/ui/button";
 
 export const Header = () => {
@@ -10,7 +11,7 @@ export const Header = () => {
       <div className="flex items-center justify-between w-full max-w-screen-lg h-full mx-auto">
         <Link href="/" className="h-full">
           <Image
-            src={kreateLogoFull}
+            src={kreateIcon}
             alt="Kreate logo"
             className="h-full w-fit"
           />

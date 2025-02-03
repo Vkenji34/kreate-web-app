@@ -32,6 +32,9 @@ export default {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        buttonPrimary: {
+          DEFAULT: "hsl(var(--button-primary))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -60,13 +63,15 @@ export default {
         },
         shadow: {
           primary: "hsl(var(--shadow-primary))",
-        }
+          secondary: "hsl(var(--shadow-secondary))",
+          destructive: "hsl(var(--shadow-destructive))",
+        },
       },
       boxShadow: {
-        'button-primary': "0 4px 0 0 hsl(var(--shadow-primary))",
-        'button-secondary': "0 4px 0 0 hsl(var(--shadow-secondary))",
-        'button-destructive': "0 4px 0 0 hsl(var(--shadow-destructive))",
-      }
+        "button-primary": "0 4px 0 0 hsl(var(--shadow-primary))",
+        "button-secondary": "0 4px 0 0 hsl(var(--shadow-secondary))",
+        "button-destructive": "0 4px 0 0 hsl(var(--shadow-destructive))",
+      },
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports

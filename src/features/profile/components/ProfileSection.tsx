@@ -24,7 +24,6 @@ export const ProfileSection = ({
         <UserAvatar
           className="size-20 lg:size-24"
           src={profilePictureUrl}
-          isVerified
         />
         <div className="flex flex-col">
           <div className="flex items-center gap-2">

@@ -14,7 +14,7 @@ const GachaBundleDetailPage = () => {
     <PageContainer withFooter={false}>
       <SectionContainer className="relative" minFullscreen padded>
         <div className="my-6 flex items-center gap-2">
-          <UserAvatar isVerified src="" className="size-16" />
+          <UserAvatar src="" className="size-16" />
           <Link href="/kitsunee">
             <p className="text-lg font-semibold">Kitsunee</p>
           </Link>

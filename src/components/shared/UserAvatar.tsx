@@ -7,7 +7,7 @@ type UserAvatarProps = {
   alt?: string;
   isVerified?: boolean;
   className?: string;
-  containerClassName?: string;
+  imageContainerClassName?: string;
   verifiedBadgeClassName?: string;
 };
 
@@ -15,11 +15,11 @@ export const UserAvatar = (props: UserAvatarProps) => {
   const alt = props.alt ?? "Profile Picture";
 
   return (
-    <div className={cn("relative", props.containerClassName)}>
+    <div className={cn("relative size-32", props.className)}>
       <div
         className={cn(
-          "h-32 w-32 overflow-hidden rounded-full border-4",
-          props.className,
+          "size-full overflow-hidden rounded-full border-4 border-border",
+          props.imageContainerClassName,
         )}
       >
         <Avatar className="w-full h-full">
@@ -32,11 +32,11 @@ export const UserAvatar = (props: UserAvatarProps) => {
       {props.isVerified && (
         <div
           className={cn(
-            "absolute bottom-0 right-0 rounded-full bg-primary p-1",
+            "absolute bottom-0 right-0 rounded-full bg-primary p-1 size-[calc(100%/2.5)]",
             props.verifiedBadgeClassName,
           )}
         >
-          <BadgeCheck className="h-6 w-6 text-white" />
+          <BadgeCheck className="size-full text-white" />
         </div>
       )}
     </div>
