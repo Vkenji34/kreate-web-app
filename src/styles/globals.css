@@ -7,14 +7,14 @@
     --foreground: 0 0% 27%;
     --card: 280 20% 97%;
     --card-foreground: 259 5% 15%;
-    --popover: 259 100% 95%;
-    --popover-foreground: 259 100% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 27%;
     --primary: 259 89% 45%;
     --button-primary: 259 90% 61%;
     --primary-foreground: 0 0% 100%;
     --secondary: 260 100% 76%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 221 30% 85%;
+    --muted: 0 0% 58%;
     --muted-foreground: 259 5% 35%;
     --accent: 221 30% 80%;
     --accent-foreground: 259 5% 15%;

@@ -1,9 +1,8 @@
-import { Coins } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import kreateIcon from "~/assets/kreate_icon.png";
-import avatarBorder from "~/assets/avatar_border.svg";
-import { Button } from "~/components/ui/button";
+import { UserAvatar } from "../shared/UserAvatar";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
 
 export const Header = () => {
   return (
@@ -17,10 +16,16 @@ export const Header = () => {
           />
         </Link>
 
-        <Button variant="muted" size="sm">
-          <Coins />
-          10
-        </Button>
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <UserAvatar src="" className="size-8" imageContainerClassName="border-2" />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent side="bottom" align="end">
+            <DropdownMenuItem>My Collection</DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem className="text-destructive">Logout</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </header>
   );

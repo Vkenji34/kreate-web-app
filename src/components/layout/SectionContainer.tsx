@@ -10,14 +10,14 @@ type SectionContainerProps = {
 export const SectionContainer = forwardRef<
   HTMLElement,
   React.HTMLAttributes<HTMLElement> & SectionContainerProps
->(({ className, children, padded, containerClassName, ...props }, ref) => {
+>(({ className, children, padded, containerClassName, minFullscreen, ...props }, ref) => {
   return (
     <div className={cn("relative h-full", containerClassName)}>
       <section
         ref={ref}
         className={cn(
           "container flex flex-col lg:max-w-screen-lg lg:w-full",
-          props.minFullscreen &&
+          minFullscreen &&
             "flex min-h-[calc(100vh-144px)] w-full flex-col",
           className,
           padded ? "px-4" : "",

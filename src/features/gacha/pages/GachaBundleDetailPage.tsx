@@ -8,18 +8,40 @@ import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { Progress } from "~/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
+import { toRupiah } from "~/utils/toRupiah";
 
 const GachaBundleDetailPage = () => {
+  const title = "Kitsu Office Set Y2K";
+  const username = "Kitsune";
+
+  const photoCount = 10
+  const pricePerPull = 10000
+
   return (
-    <PageContainer withFooter={false}>
+    <PageContainer>
       <SectionContainer className="relative" minFullscreen padded>
-        <div className="my-6 flex items-center gap-2">
-          <UserAvatar src="" className="size-16" />
-          <Link href="/kitsunee">
-            <p className="text-lg font-semibold">Kitsunee</p>
+        {/* Info Section */}
+        <div className="flex flex-col">
+          <h1 className="text-center text-2xl font-bold">{title}</h1>
+
+          <Link
+            href={"/" + username}
+            className="mt-1 flex w-full items-center justify-center gap-x-1"
+          >
+            <UserAvatar
+              src=""
+              className="size-5"
+              imageContainerClassName="border"
+            />
+            <span className="text-primary">{username}</span>
           </Link>
+
+          <div className="flex gap-3 justify-center items-center text-muted mt-3">
+            <span>{photoCount} Photos</span>
+            <span>•</span>
+            <span>{toRupiah(pricePerPull)}/pull</span>
+          </div>
         </div>
-        <h1 className="text-3xl font-bold">Kitsu Office Set Y2K</h1>
 
         {/* Image Card */}
         <div className="relative mt-4 overflow-hidden rounded-3xl border-2 border-primary p-1">
@@ -36,6 +58,10 @@ const GachaBundleDetailPage = () => {
             </Badge>
           </div>
         </div>
+
+        <Button variant="link" className="w-fit mx-auto text-muted mt-3">Lihat Semua</Button>
+
+        <Button size="lg" className="mt-4">Pull Gacha for {toRupiah(pricePerPull)}</Button>
 
         {/* Tabs */}
         <Tabs defaultValue="description" className="my-6 pb-10">
@@ -96,12 +122,6 @@ const GachaBundleDetailPage = () => {
           </TabsContent>
         </Tabs>
 
-        {/* Action Buttons */}
-        <div className="container sticky bottom-0 left-0 right-0 flex bg-background lg:static lg:pb-8">
-          <Button className="w-full">
-            1 <PiggyBank className="ml-1 inline" /> for 1 spin
-          </Button>
-        </div>
       </SectionContainer>
     </PageContainer>
   );

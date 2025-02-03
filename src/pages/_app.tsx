@@ -13,6 +13,10 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       defaultTheme="light"
       disableTransitionOnChange
     >
+      <style
+        jsx
+        global
+      >{`:root { --font-rubik-sans: ${rubik.style.fontFamily};}}`}</style>
       <div className={rubik.className}>
         <Component {...pageProps} />
       </div>
